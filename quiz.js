@@ -127,16 +127,14 @@ function getNewQuestion() {
   });
 
   availableQuestions.splice(questionIndex, 1);
-
   acceptingAnswers = true;
 }
 
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
     console.log(e.target);
-    if (!acceptingAnswers) return;
-
-    acceptingAnswers = false;
+    if (!acceptingAnswers) 
+    return; acceptingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
 
@@ -144,13 +142,11 @@ choices.forEach((choice) => {
     if (selectedAnswer == currentQuestion.answer) {
       classToApply = "correct";
     }
-
     if (classToApply === "correct") {
       scoreUp(correctBonus);
     } else {
       timer -= 15;
     }
-
     selectedChoice.parentElement.classList.add(classToApply);
     setTimeout(() => {
       selectedChoice.parentElement.classList.remove(classToApply);
@@ -177,5 +173,4 @@ function timeDown() {
     }
   }, 1000);
 }
-
 startGame();

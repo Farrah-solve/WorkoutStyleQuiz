@@ -35,7 +35,6 @@
     text-align: center;
   }
   
-  
   .container {
     width: 100vw;
     height: 100vh;
@@ -73,7 +72,6 @@
     display: none;
   }
   
-  
   .btn {
     font-size: 1.8rem;
     padding: 1rem 0;
@@ -98,8 +96,15 @@
     box-shadow: none;
     transform: none;
   }
+
+  .footer {
+    position: bottom;
+    margin-bottom: 25%;
+    color: rgb(46, 0, 66);
+    text-align: center;
+    font-size: small;
+  }
   
-  /* Quiz look */
   .choice-container {
     display: flex;
     margin-bottom: 0.5rem;
@@ -117,8 +122,6 @@
     transition: transform 150ms;
   }
   
-  
-  
   .choice-text {
     padding: 1.5rem;
     width: 100%;
@@ -132,7 +135,6 @@
   .incorrect {
     background-color: red;
   }
-  
   
   #display {
     display: flex;
