@@ -170,7 +170,7 @@ function timeDown() {
     document.getElementById("timer").innerHTML = timer;
     timer--;
     timerText.innerText = timer;
-    if (timer === 0) {
+    if (timer <= 0) {
       clearInterval(interval);
       localStorage.setItem("lastQuizScore", score);
       return window.location.assign("result.html");
